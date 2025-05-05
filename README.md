@@ -10,6 +10,7 @@ Welcome to my personal portfolio website! This site showcases my projects, skill
 ## 🚀 Tech Stack
 
 - **Framework**: Next.js / React
+- **Front-End**: Tailwind CSS & Shadcn
 - **Deployment**: Vercel
 - **Version Control**: Git + GitHub
 

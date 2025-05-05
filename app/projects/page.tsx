@@ -35,7 +35,7 @@ export default function ProjectsPage() {
       title: 'Portfolio Website',
       thumbnail: '/profileAvatar.jpg',
       description: 'This portfolio site!',
-      pdfLink: '/documents/Portfolio Website Project Description.pdf',
+      pdfLink: 'https://github.com/ECampbell37/portfolioWebsite/blob/main/README.md',
       codeLink: 'https://github.com/ECampbell37/portfolioWebsite',
     },
     {
