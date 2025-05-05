@@ -6,15 +6,15 @@ export default function ProjectsPage() {
     {
       title: 'AI Tutor Senior Project',
       thumbnail: '/images/tutor_logo.png',
-      description: '(In Progress) A multi-functional AI Tutor web application designed to encourage learning, built mainly with LangChain and Next.js',
+      description: 'A multi-functional AI Tutor web application designed to encourage personalized learning, built mainly with LangChain and Next.js',
       pdfLink: 'https://github.com/ECampbell37/AI_Tutor_SeniorProject/blob/master/README.md',
       codeLink: 'https://github.com/ECampbell37/AI_Tutor_SeniorProject',
     },
     {
       title: 'Big 5 Personality Test Mobile App',
       thumbnail: '/images/personality.jpg',
-      description: '(In Progress) A customized React Native and Expo mobile app allowing users to take an accurate Big 5 Personality Test',
-      pdfLink: '/documents/Personality Test Pages.pdf',
+      description: 'A customized React Native & Expo mobile app allowing users to take an accurate Big 5 Personality Test',
+      pdfLink: 'https://github.com/ECampbell37/PersonalityTestMobileApp/blob/master/README.md',
       codeLink: 'https://github.com/ECampbell37/PersonalityTestMobileApp',
     },
     {

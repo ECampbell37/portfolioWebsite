@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 export default function SkillsPage() {
   const skills = {
     'AI/ML': {
-      description: 'My particular specialty and field of interest. I have taken college courses, online Coursera specialization courses, IBM\'s online AI Engineering Professional Certificate program, and have worked on my own personal projects in the world of Machine Learning and AI. I have experience preprocessing datasets, working with Machine Learning models such as logistic regression and random forests, building neural networks, hyperparameter-tuning, and evaluating model performance. I also have experience and a passion for working with Generative AI technologies, building chatbots, and developing Gen AI applications using LangChain. This field particularly excites me, and I hope to expand the world of AI/ML for many years to come!',
+      description: 'My particular specialty and field of interest. I have taken college courses, online Coursera specialization courses, IBM\'s online AI Engineering Professional Certificate program, and have worked on my own personal projects in the world of Machine Learning and AI. I have experience preprocessing datasets, working with Machine Learning models such as logistic regression and random forests, building neural networks, hyperparameter-tuning, and evaluating model performance. I also have experience and a passion for working with Generative AI technologies, building chatbots, and developing Gen AI applications using RAG and LangChain. This field particularly excites me, and I hope to expand the world of AI/ML for many years to come!',
       skillsList: [
         { name: 'Python', logo: '/images/python.png' },
         { name: 'TensorFlow', logo: '/images/tensorflow.png' },
