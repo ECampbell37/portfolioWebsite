@@ -1,83 +1,99 @@
-import Link from 'next/link'
-import { Button } from "@/components/ui/button"
+'use client'
 
 export default function SkillsPage() {
   const skills = {
     'AI/ML': {
-      description: 'My particular specialty and field of interest. I have taken college courses, online Coursera specialization courses, IBM\'s online AI Engineering Professional Certificate program, and have worked on my own personal projects in the world of Machine Learning and AI. I have experience preprocessing datasets, working with Machine Learning models such as logistic regression and random forests, building neural networks, hyperparameter-tuning, and evaluating model performance. I also have experience and a passion for working with Generative AI technologies, building chatbots, and developing Gen AI applications using RAG and LangChain. This field particularly excites me, and I hope to expand the world of AI/ML for many years to come!',
+      id: 'ai',
+      description:
+        "AI and Machine Learning are my primary areas of expertise and interest. I’ve completed college coursework, Coursera specializations, IBM’s AI Engineering Professional Certificate, and a collection of personal projects in the world of AI/ML. My hands-on experience includes training classical models like logistic regression and random forests, building and tuning neural networks, and evaluating model performance. I’m also passionate about Generative AI — particularly developing chatbots and intelligent applications using LangChain and retrieval-augmented generation (RAG). This field particularly excites me, and I hope to expand the world of AI/ML for many years to come!",
       skillsList: [
         { name: 'Python', logo: '/images/python.png' },
+        { name: 'NumPy', logo: '/images/numpy.png' },
         { name: 'TensorFlow', logo: '/images/tensorflow.png' },
         { name: 'PyTorch', logo: '/images/pytorch.png' },
         { name: 'SciKit-Learn', logo: '/images/sklearn.png' },
         { name: 'OpenAI', logo: '/images/openai.png' },
         { name: 'LangChain', logo: '/images/LangChain.png' },
+        { name: 'Jupyter Notebook', logo: '/images/Jupyter2.png' },
       ],
     },
     'Web Application Development': {
-      description: 'Intermediate-level experience building web applications using HTML, CSS, JavaScript, React, and Next.js. I have a good understanding of the fundamentals of web design, application development, and internet protocol. Web Applications are a great way to make your code accessible and easy to use for a wide range of users, and for that I appreciate their immense potential value.',
+      id: 'webdev',
+      description:
+        'Intermediate experience building modern web apps with React, Next.js, and Tailwind. I am skilled in UI/UX design, full-stack development, API integration, and Vercel cloud deployment. Web Applications are a great way to make code accessible and easy to navigate for a wide range of users, and for that I appreciate their immense value.',
       skillsList: [
         { name: 'HTML', logo: '/images/HTML.png' },
         { name: 'CSS', logo: '/images/CSS.png' },
         { name: 'JavaScript', logo: '/images/js3.png' },
-        { name: 'Next.js', logo: '/images/nextjs.png' }, 
+        { name: 'Next.js', logo: '/images/nextjs.png' },
         { name: 'React', logo: '/images/react.png' },
         { name: 'Tailwind', logo: '/images/tailwindCSS.png' },
       ],
     },
+    'Data Science': {
+      id: 'ds',
+      description:
+        'Skilled in working with datasets, Data Preprocessing, Exploratory Data Analysis (EDA), Data Visualization, Database Design, querying databases, and collecting data. We live in a data-centric world, and understanding how to work with and analyze data is perhaps just as important as knowing how to read and write code.',
+      skillsList: [
+        { name: 'SQL', logo: '/images/sql.png' },
+        { name: 'MySQL', logo: '/images/mySQL.png' },
+        { name: 'PostgreSQL', logo: '/images/postgresql.png' },
+        { name: 'Supabase', logo: '/images/supabase.png' },
+      ],
+    },
     'CS Fundamentals': {
-      description: 'Solid understanding of computer science principles and basic algorithms. Much of my college coursework was geared towards understanding the basics of computer architecture, data structures, algorithms, object-oriented language properties such as classes and polymorphism, and proper documentation/coding standards. I have a well rounded background in C/C++, and I understand the principles of low and high level coding languages.',
+      id: 'cs',
+      description:
+        'Solid understanding of computer science principles and basic algorithms. Much of my college coursework was geared towards understanding the basics of computer architecture, data structures, algorithms, OOP properties such as classes and polymorphism, and proper documentation/coding standards. I have a well rounded background in C++, and I understand the principles of low and high level coding languages.',
       skillsList: [
         { name: 'C', logo: '/images/C.png' },
-        { name: 'C++', logo: '/images/C++.png' }, 
-        { name: 'Visual Studio Code', logo: '/images/Vscode.png' }, 
+        { name: 'C++', logo: '/images/C++.png' },
+        { name: 'Java', logo: '/images/java.png' },
+        { name: 'VS Code', logo: '/images/Vscode.png' },
       ],
     },
   }
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      <header className="p-1 max-w-7xl mx-auto">
-        <div className="flex justify-end mt-4">
-          <Link href="/">
-            <Button variant="link">Back to Home</Button>
-          </Link>
-        </div>
-        <h1 className="mr-2 ml-2 text-4xl font-bold">Skills</h1>
-        <p className="mr-2 ml-2 mt-4 text-gray-700">
-          Here are some of the technologies and platforms I am skilled in. Each section describes my interest and background in the respective field, as well as how those skills were generally acquired. Check out my projects page and resume to learn more!
-        </p>
-        <hr className="my-6 border-gray-300" />
-      </header>
+      {/* Header Section */}
+      <section className="bg-gradient-to-r from-blue-100 to-cyan-100 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h1 className="text-4xl font-bold mb-4">My Technical Skills</h1>
+          <p className="text-gray-700 text-lg max-w-2xl mx-auto">
+            I&apos;ve worked across AI/ML, full-stack development, Data Science, and CS fundamentals. Each section below describes my interest and background in the respective field, as well as how those skills were generally acquired. Check out my projects page and resume to learn more!
 
-      <main className="max-w-7xl mx-auto p-4">
-        {/* Loop through skill groups */}
-        {Object.entries(skills).map(([category, { description, skillsList }]) => (
-          <div key={category} className="mb-16">
-            <h2 className="text-2xl font-semibold mt-4">{category}</h2>
-            <p className="mt-2 text-gray-700">{description}</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-4">
-              {/* Loop through individual skills */}
+          </p>
+        </div>
+      </section>
+
+      {/* Main Skills Content */}
+      <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {Object.entries(skills).map(([category, { id, description, skillsList }]) => (
+          <section
+            id={id}
+            key={category}
+            className="mb-16 bg-white border border-gray-200 rounded-2xl shadow-md p-6 transition hover:shadow-lg"
+          >
+            <h2 className="text-2xl font-bold text-black mb-2">{category}</h2>
+            <p className="text-gray-700 mb-6">{description}</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               {skillsList.map(skill => (
-                <div key={skill.name} className="p-5 bg-blue-100 rounded-md text-center">
+                <div
+                  key={skill.name}
+                  className="bg-sky-50 rounded-lg p-4 text-center hover:scale-105 transition-transform shadow-sm"
+                >
                   <img
                     src={skill.logo}
                     alt={`${skill.name} Logo`}
                     className="w-16 h-16 mx-auto mb-2"
                   />
-                  <h3 className="text-xl font-semibold">{skill.name}</h3>
+                  <h3 className="text-lg font-medium">{skill.name}</h3>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
         ))}
-
-        {/* Back to Home Button */}
-        <div className="mt-8">
-          <Link href="/">
-            <Button variant="link">Back to Home</Button>
-          </Link>
-        </div>
       </main>
     </div>
   )
