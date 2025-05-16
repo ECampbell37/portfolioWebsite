@@ -66,7 +66,7 @@ export default function ProjectsPage() {
     {
       title: 'GPT Article Summarizer',
       thumbnail: '/images/openai2.jpeg',
-      description: 'A python code notebook capable of generating a compact bullet point summary of a given text. My first program involing Generative AI!',
+      description: 'A python code notebook capable of generating a compact bullet point summary of a given text. My first program involving Generative AI!',
       pdfLink: '/documents/GPT Article Summarizer Project Description.pdf',
       codeLink: 'https://github.com/ECampbell37/ChatGPT_ArticleSummarizer',
     },
