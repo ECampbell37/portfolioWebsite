@@ -1,3 +1,5 @@
+// Skills Page
+
 'use client'
 
 export default function SkillsPage() {
