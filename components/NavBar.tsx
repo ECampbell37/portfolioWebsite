@@ -1,9 +1,11 @@
+// Top Nav Bar
+
 'use client'
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useMemo } from 'react'
-import { MailIcon, Menu} from 'lucide-react'
+import { MailIcon, X, Menu} from 'lucide-react'
 import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
@@ -37,15 +39,32 @@ export default function Navbar() {
     <header className="relative flex justify-between items-center p-4 max-w-7xl mx-auto">
       <h1 className="text-2xl font-semibold text-gray-900">{headerText}</h1>
 
-      {/* Mobile Menu Toggle */}
+      {/* Mobile Toggle */}
       <button
-        className="absolute top-4 right-4 text-gray-900 md:hidden flex items-center"
-        onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        className="absolute top-4 right-4 text-gray-900 md:hidden flex items-center z-50"
+        onClick={() => setMobileMenuOpen((prev) => !prev)}
         title="Toggle mobile menu"
       >
         <span className="mr-2 text-lg">Menu</span>
-        <Menu className="h-6 w-6" strokeWidth={2.2} />
+        <div className="relative w-6 h-6 transition-transform transition-opacity duration-300 ease-in-out">
+          {/* Hamburger Icon */}
+          <Menu
+            className={`absolute transition-all duration-300 ease-in-out transform ${
+              isMobileMenuOpen ? 'opacity-0 rotate-90 scale-75' : 'opacity-100 rotate-0 scale-100'
+            }`}
+            strokeWidth={2.2}
+          />
+          {/* X Icon */}
+          <X
+            className={`absolute transition-all duration-300 ease-in-out transform ${
+              isMobileMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-75'
+            }`}
+            strokeWidth={2.2}
+          />
+        </div>
       </button>
+
+
 
       {/* Desktop Nav */}
       <ul className="hidden md:flex items-center space-x-5">
@@ -69,13 +88,21 @@ export default function Navbar() {
       </ul>
 
       {/* Mobile Dropdown */}
-      {isMobileMenuOpen && (
-        <ul className="absolute top-16 right-4 bg-white border border-gray-200 shadow-md rounded-lg p-4 space-y-4 md:hidden w-48 z-50">
+      <div
+        className={`absolute top-16 right-4 w-48 md:hidden z-40 rounded-lg bg-white border border-gray-200 shadow-md transform transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+      >
+        <ul className="p-4 space-y-4">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.href}
-                className={`${pathname === item.href ? 'text-blue-600' : 'text-gray-600'} hover:text-blue-600 text-lg`}
+                className={`${
+                  pathname === item.href ? 'text-blue-600' : 'text-gray-600'
+                } hover:text-blue-600 text-lg`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -88,7 +115,7 @@ export default function Navbar() {
             </a>
           </li>
         </ul>
-      )}
+      </div>
     </header>
   )
 }
