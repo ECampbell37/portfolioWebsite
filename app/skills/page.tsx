@@ -7,7 +7,7 @@ export default function SkillsPage() {
     'AI/ML': {
       id: 'ai',
       description:
-        "AI and Machine Learning are my primary areas of expertise and interest. I’ve completed college coursework, Coursera specializations, IBM’s AI Engineering Professional Certificate, and a collection of personal projects in the world of AI/ML. My hands-on experience includes training classical models like logistic regression and random forests, building and tuning neural networks, and evaluating model performance. I’m also passionate about Generative AI — particularly developing chatbots and intelligent applications using LangChain and retrieval-augmented generation (RAG). This field particularly excites me, and I hope to expand the world of AI/ML for many years to come!",
+        "AI and Machine Learning are my primary areas of expertise and interest. I’ve completed college coursework, Coursera specializations, IBM’s AI Engineering Professional Certificate, and a collection of personal projects. My hands-on experience includes training models like logistic regression and random forests, developing and fine-tuning neural networks, and evaluating model performance. I’m especially passionate about Generative AI — creating LLM-powered applications using LangChain, GPT models, and retrieval-augmented generation (RAG). This field truly excites me, and I hope to expand the world of AI/ML for many years to come!",
       skillsList: [
         { name: 'Python', logo: '/images/python.png' },
         { name: 'NumPy', logo: '/images/NumPy.png' },
@@ -22,7 +22,7 @@ export default function SkillsPage() {
     'Web Application Development': {
       id: 'webdev',
       description:
-        'Intermediate experience building modern web apps with React, Next.js, and Tailwind. I am skilled in UI/UX design, full-stack development, API integration, and Vercel cloud deployment. Web Applications are a great way to make code accessible and easy to navigate for a wide range of users, and for that I appreciate their immense value.',
+        'Intermediate experience building modern web apps with React, Next.js, and Tailwind. I am skilled in UI/UX design, full-stack development, API integration, and Vercel cloud deployment. I’ve also worked with Docker to containerize and deploy applications to cloud environments, such as AWS. Web Applications are a great way to make code accessible and easy to navigate for a wide range of users, and for that I appreciate their immense value.',
       skillsList: [
         { name: 'HTML', logo: '/images/HTML.png' },
         { name: 'CSS', logo: '/images/CSS.png' },
@@ -30,6 +30,8 @@ export default function SkillsPage() {
         { name: 'Next.js', logo: '/images/nextjs.png' },
         { name: 'React', logo: '/images/react.png' },
         { name: 'Tailwind', logo: '/images/tailwindCSS.png' },
+        { name: 'Docker', logo: '/images/docker.png' },
+        { name: 'AWS', logo: '/images/aws.png' },
       ],
     },
     'Data Science': {

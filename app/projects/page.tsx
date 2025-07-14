@@ -17,15 +17,22 @@ export default function ProjectsPage() {
   // All projects
   const projects = [
     {
+      title: 'Resume Assistant Web App',
+      thumbnail: '/images/Resume-pic2.png',
+      description: 'A GPT-4o-powered resume analysis web app with automated feedback, job role suggestions, and chatbot Q&A.',
+      pdfLink: 'https://github.com/ECampbell37/Resume_Assistant_Frontend/blob/master/README.md',
+      codeLink: 'https://github.com/ECampbell37/Resume_Assistant_Frontend',
+    },
+    {
       title: 'Big 5 Personality Test Mobile App',
-      thumbnail: '/images/personality.jpg',
+      thumbnail: '/images/personality2.jpg',
       description: 'A customized React Native & Expo mobile app allowing users to take an accurate Big 5 Personality Test',
       pdfLink: 'https://github.com/ECampbell37/PersonalityTestMobileApp/blob/master/README.md',
       codeLink: 'https://github.com/ECampbell37/PersonalityTestMobileApp',
     },
     {
       title: 'Canoga (Java/Android)',
-      thumbnail: '/images/java2.png',
+      thumbnail: '/images/java3.png',
       description: 'An Android version of the board game Canoga (Shut the Box) written in Java, including an intelligent CPU opponent and a graphical user interface',
       pdfLink: 'https://github.com/ECampbell37/Canoga_Java_Android/blob/main/README.md',
       codeLink: 'https://github.com/ECampbell37/Canoga_Java_Android',
