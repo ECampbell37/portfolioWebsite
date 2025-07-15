@@ -36,8 +36,8 @@ export default function Navbar() {
 
 
   return (
-    <header className="relative flex justify-between items-center p-4 max-w-7xl mx-auto">
-      <h1 className="text-2xl font-semibold text-gray-900">{headerText}</h1>
+    <header className="relative flex justify-between items-center p-4 max-w-7xl 2xl:max-w-screen-2xl mx-auto">
+      <h1 className="text-2xl 2xl:text-3xl font-semibold text-gray-900">{headerText}</h1>
 
       {/* Mobile Toggle */}
       <button
@@ -67,12 +67,12 @@ export default function Navbar() {
 
 
       {/* Desktop Nav */}
-      <ul className="hidden md:flex items-center space-x-5">
+      <ul className="hidden md:flex items-center space-x-5 2xl:space-x-6">
         {navItems.map((item) => (
           <li key={item.name}>
             <Link
               href={item.href}
-              className={`${pathname === item.href ? 'text-blue-600' : 'text-gray-600'} hover:text-blue-600 text-lg`}
+              className={`${pathname === item.href ? 'text-blue-600' : 'text-gray-600'} hover:text-blue-600 text-xl 2xl:text-2xl`}
             >
               {item.name}
             </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
         ))}
         <li>
           <a href="mailto:elijahcampbellihim@gmail.com" target="_blank" rel="noopener noreferrer">
-            <Button variant="default" className="h-auto px-4 py-2">
+            <Button variant="default" className="h-auto px-4 py-2 text-md 2xl:text-lg">
               <MailIcon className="mr-2 h-5 w-5" /> Contact Me
             </Button>
           </a>

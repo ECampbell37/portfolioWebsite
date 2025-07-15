@@ -99,17 +99,17 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-white text-gray-900">
       {/* Header */}
       <header className="max-w-7xl mx-auto px-6 py-16 text-center">
-        <h1 className="text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+        <h1 className="text-5xl 2xl:text-6xl font-extrabold text-gray-900 tracking-tight mb-4">
           My Projects
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p className="text-lg 2xl:text-xl text-gray-600 max-w-2xl 2xl:max-w-3xl mx-auto">
           A showcase of my work in AI, Web Development, and other areas of Computer Science. Explore detailed descriptions and GitHub repos below.
         </p>
       </header>
 
       {/* Featured Project */}
-      <section className="max-w-6xl mx-auto px-6 mb-20">
-        <h2 className="text-3xl font-bold text-center text-indigo-800 mb-10">🌟 Featured Project</h2>
+      <section className="max-w-6xl 2xl:max-w-screen-2xl mx-auto px-6 mb-20">
+        <h2 className="text-3xl 2xl:text-4xl font-bold text-center text-indigo-800 mb-10">🌟 Featured Project</h2>
         <div className="bg-white rounded-3xl border border-gray-200 shadow-xl flex flex-col lg:flex-row overflow-hidden">
           <div className="w-full lg:w-1/2">
             <img
@@ -119,21 +119,21 @@ export default function ProjectsPage() {
             />
           </div>
           <div className="p-6 sm:p-8 flex flex-col justify-center w-full lg:w-1/2">
-            <h3 className="text-3xl font-bold text-blue-700 mb-4">{featuredProject.title}</h3>
-            <p className="text-gray-700 text-base leading-relaxed mb-6">{featuredProject.description}</p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+            <h3 className="text-3xl 2xl:text-4xl font-bold text-blue-700 mb-4">{featuredProject.title}</h3>
+            <p className="text-md md:text-lg 2xl:text-xl text-gray-700 text-base leading-relaxed mb-6 2xl:mb-8">{featuredProject.description}</p>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 2xl:gap-8">
               <Link href={featuredProject.liveLink} target="_blank" rel="noopener noreferrer">
-                <button className="w-full sm:w-auto px-6 py-3 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-br hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white text-base font-medium rounded-lg shadow transition">
+                <button className="text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-br hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white text-base font-medium rounded-lg shadow transition">
                   🚀 Visit Site
                 </button>
               </Link>
               <Link href={featuredProject.pdfLink} target="_blank" rel="noopener noreferrer">
-                <button className="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-base font-medium rounded-lg shadow transition">
+                <button className="text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-base font-medium rounded-lg shadow transition">
                   📄 Details
                 </button>
               </Link>
               <Link href={featuredProject.codeLink} target="_blank" rel="noopener noreferrer">
-                <button className="w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white text-base font-medium rounded-lg shadow transition">
+                <button className="text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white text-base font-medium rounded-lg shadow transition">
                   💻 View Code
                 </button>
               </Link>
@@ -144,11 +144,11 @@ export default function ProjectsPage() {
 
 
       {/* Project Grid */}
-      <main className="max-w-7xl mx-auto px-6 pb-24">
+      <main className="max-w-7xl 2xl:max-w-screen-2xl mx-auto px-6 pb-24">
 
         {/* Divider and Section Heading */}
         <div className="flex flex-col items-center mb-16">
-          <h2 className="text-2xl font-bold text-indigo-800 text-center">Additional Projects</h2>
+          <h2 className="text-2xl 2xl:text-3xl font-bold text-indigo-800 text-center">Additional Projects</h2>
           <div className="w-2/3 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent mt-4" />
         </div>
 
@@ -169,17 +169,17 @@ export default function ProjectsPage() {
               {/* Project Content */}
               <div className="p-6 flex flex-col items-center text-center">
                 <h2 className="text-2xl font-semibold text-blue-700">{project.title}</h2>
-                <p className="mt-3 text-gray-700 text-sm leading-relaxed">{project.description}</p>
+                <p className="mt-3 text-gray-700 text-md 2xl:text-lg leading-relaxed">{project.description}</p>
 
                 {/* Centered Buttons */}
                 <div className="mt-5 flex flex-wrap justify-center gap-3">
                   <Link href={project.pdfLink} target="_blank" rel="noopener noreferrer">
-                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-6 py-3 rounded-lg text-lg shadow transition">
+                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm 2xl:text-lg px-6 py-3 rounded-lg text-lg shadow transition">
                       Read Details
                     </button>
                   </Link>
                   <Link href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                    <button className="bg-gray-800 hover:bg-gray-900 text-white text-sm px-6 py-3 rounded-lg text-lg shadow transition">
+                    <button className="bg-gray-800 hover:bg-gray-900 text-white text-sm 2xl:text-lg px-6 py-3 rounded-lg text-lg shadow transition">
                       View Code
                     </button>
                   </Link>
@@ -192,7 +192,7 @@ export default function ProjectsPage() {
         {/* Footer Return */}
         <div className="mt-20 text-center">
           <Link href="/">
-            <Button variant="link">← Back to Home</Button>
+            <Button variant="link" className="text-lg 2xl:text-xl" >← Back to Home</Button>
           </Link>
         </div>
       </main>
