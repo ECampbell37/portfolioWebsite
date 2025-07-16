@@ -64,7 +64,7 @@ export default function SkillsPage() {
       <section className="bg-gradient-to-r from-blue-100 to-cyan-100 py-16 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl 2xl:text-5xl font-bold mb-4">My Technical Skills</h1>
-          <p className="text-gray-700 text-lg 2xl:text-xl max-w-2xl 2xl:max-w-3xl mx-auto">
+          <p className="text-gray-700 text-lg 2xl:text-2xl max-w-2xl 2xl:max-w-3xl mx-auto">
             I&apos;ve worked across AI/ML, full-stack development, Data Science, and CS fundamentals. Each section below describes my interest and background in the respective field, as well as how those skills were generally acquired. Check out my projects page and resume to learn more!
 
           </p>
@@ -80,7 +80,7 @@ export default function SkillsPage() {
             className="mb-16 bg-white border border-gray-200 rounded-2xl shadow-md p-6 transition hover:shadow-lg"
           >
             <h2 className="text-2xl 2xl:text-3xl font-bold text-black mb-2">{category}</h2>
-            <p className="text-md 2xl:text-lg text-gray-700 mb-6">{description}</p>
+            <p className="text-md 2xl:text-xl text-gray-700 mb-6">{description}</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
               {skillsList.map(skill => (
                 <div
@@ -90,9 +90,9 @@ export default function SkillsPage() {
                   <img
                     src={skill.logo}
                     alt={`${skill.name} Logo`}
-                    className="w-16 h-16 2xl:w-20 2xl:h-20 mx-auto mb-2"
+                    className="w-16 h-16 2xl:w-24 2xl:h-24 mx-auto mb-2"
                   />
-                  <h3 className="text-lg 2xl:text-xl font-medium">{skill.name}</h3>
+                  <h3 className="text-lg 2xl:text-2xl font-medium">{skill.name}</h3>
                 </div>
               ))}
             </div>

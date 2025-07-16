@@ -25,13 +25,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Hero Section */}
-      <main className="max-w-7xl 2xl:max-w-screen-2xl mx-auto mt-8 p-4">
+      <main className="max-w-7xl 2xl:max-w-screen-2xl mx-auto mt-8 2xl:mt-10 p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-r from-blue-100 to-sky-100 p-8 rounded-2xl">
             {/* Main Message */}
             <h2 className="text-4xl 2xl:text-5xl font-bold mb-2 text-gray-900">Hi I&apos;m</h2>
             <h1 className="text-5xl 2xl:text-6xl font-bold mb-4 text-gray-900">Elijah Campbell</h1>
-            <p className="text-md 2xl:text-lg mb-6 text-gray-700">
+            <p className="text-md 2xl:text-lg mb-6 text-gray-800">
               A forward-thinking developer with a passion for solving problems and helping others. Specializing in machine learning and artificial intelligence, I am excited to use today&apos;s vast array of revolutionary technologies to build creative and helpful applications.
             </p>
             {/* Buttons Section */}
@@ -97,12 +97,12 @@ export default function Home() {
       </main>
 
     {/* Scrolling Images */}
-      <footer className="mt-14 bg-white py-12 px-4">
+      <footer className="mt-10 2xl:mt-14 bg-white py-12 px-4">
         <h2 className="text-3xl 2xl:text-4xl font-bold mb-6 text-center text-gray-800">
           My Skills & Platforms
         </h2>
 
-        <div className="w-full 2xl:max-w-screen-2xl 2xl:mx-auto overflow-hidden rounded-2xl border border-blue-200 bg-sky-50 shadow-inner">
+        <div className="w-full mx-auto overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-sky-50 via-blue-50 to-sky-50 shadow-inner">
           <div className="scrolling-images flex space-x-4 p-6 group">
             {[...images, ...images].map((src, index) => (
               <div
@@ -112,7 +112,7 @@ export default function Home() {
                 <img
                   src={src}
                   alt={`Logo ${index + 1}`}
-                  className="w-36 h-36 2xl:w-44 2xl:h-44 object-contain rounded-lg bg-sky-50 p-2"
+                  className="w-36 h-36 2xl:w-44 2xl:h-44 object-contain rounded-lg bg-transparent p-2"
                 />
               </div>
             ))}

@@ -102,7 +102,7 @@ export default function ProjectsPage() {
         <h1 className="text-5xl 2xl:text-6xl font-extrabold text-gray-900 tracking-tight mb-4">
           My Projects
         </h1>
-        <p className="text-lg 2xl:text-xl text-gray-600 max-w-2xl 2xl:max-w-3xl mx-auto">
+        <p className="text-lg 2xl:text-2xl text-gray-600 max-w-2xl 2xl:max-w-3xl mx-auto">
           A showcase of my work in AI, Web Development, and other areas of Computer Science. Explore detailed descriptions and GitHub repos below.
         </p>
       </header>
