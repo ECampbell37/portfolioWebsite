@@ -4,6 +4,7 @@
 
 import { GithubIcon, LinkedinIcon, FileText} from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 
 // Images array for scrolling images
 const images = [
@@ -45,7 +46,7 @@ export default function Home() {
               >
                 <Button
                   variant="default"
-                  className="w-full sm:w-auto px-5 py-6 text-md 2xl:text-xl font-semibold"
+                  className="w-full sm:w-auto px-5 py-6 text-md 2xl:text-xl font-semibold hover:scale-105 transition-transform"
                 >
                   <FileText className="mr-2 h-5 w-5" /> View Resume
                 </Button>
@@ -61,7 +62,7 @@ export default function Home() {
                 >
                   <Button
                     variant="ghost"
-                    className="w-full sm:w-auto px-6 py-6 text-md 2xl:text-xl font-semibold flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-6 text-md 2xl:text-xl font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform"
                   >
                     <GithubIcon size={20} />
                     GitHub
@@ -76,7 +77,7 @@ export default function Home() {
                 >
                   <Button
                     variant="ghost"
-                    className="w-full sm:w-auto px-6 py-6 text-md 2xl:text-xl font-semibold flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto px-6 py-6 text-md 2xl:text-xl font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform"
                   >
                     <LinkedinIcon size={20} />
                     LinkedIn
@@ -90,7 +91,7 @@ export default function Home() {
             <img
               src="/profileAvatar.jpg"
               alt="Elijah Campbell Avatar"
-              className="rounded-full w-80 h-80 2xl:w-96 2xl:h-96 object-cover shadow-lg"
+              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-full object-cover shadow-xl border-4 border-white hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
@@ -99,7 +100,7 @@ export default function Home() {
     {/* Scrolling Images */}
       <footer className="mt-10 2xl:mt-14 bg-white py-12 px-4">
         <h2 className="text-3xl 2xl:text-4xl font-bold mb-6 text-center text-gray-800">
-          My Skills & Platforms
+          My Tools & Platforms
         </h2>
 
         <div className="w-full mx-auto overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-sky-50 via-blue-50 to-sky-50 shadow-inner">
@@ -112,7 +113,7 @@ export default function Home() {
                 <img
                   src={src}
                   alt={`Logo ${index + 1}`}
-                  className="w-36 h-36 2xl:w-44 2xl:h-44 object-contain rounded-lg bg-transparent p-2"
+                  className="w-36 h-36 2xl:w-44 2xl:h-44 object-contain rounded-lg bg-transparent p-2 hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}
@@ -136,6 +137,27 @@ export default function Home() {
           }
         `}</style>
       </footer>
+
+      {/* Face Buttons */}
+      <div className="mt-16 flex justify-center gap-16 flex-wrap px-6 pb-24">
+        <Link href="/skills" className="hover:no-underline">
+          <button className="text-2xl 2xl:text-3xl font-bold py-5 px-10 rounded-full flex items-center gap-4 transition-all duration-300
+            bg-transparent text-blue-600 hover:text-white
+            hover:bg-gradient-to-r hover:from-blue-400 hover:via-sky-500 hover:to-blue-600
+            hover:shadow-[0_0_20px_rgba(56,189,248,0.6)] hover:scale-110">
+            🛠️ Skills
+          </button>
+        </Link>
+
+        <Link href="/projects" className="hover:no-underline">
+          <button className="text-2xl 2xl:text-3xl font-bold py-5 px-10 rounded-full flex items-center gap-4 transition-all duration-300
+            bg-transparent text-purple-600 hover:text-white
+            hover:bg-gradient-to-r hover:from-purple-400 hover:via-fuchsia-500 hover:to-purple-600
+            hover:shadow-[0_0_20px_rgba(192,132,252,0.6)] hover:scale-110">
+            🚀 Projects
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }

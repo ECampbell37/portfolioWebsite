@@ -2,6 +2,9 @@
 
 'use client'
 
+import Link from 'next/link'
+import { Button } from "@/components/ui/button"
+
 export default function SkillsPage() {
   const skills = {
     'AI/ML': {
@@ -98,6 +101,13 @@ export default function SkillsPage() {
             </div>
           </section>
         ))}
+
+        {/* Footer Return */}
+        <div className="mt-20 text-center">
+          <Link href="/">
+            <Button variant="link" className="text-lg 2xl:text-xl" >← Back to Home</Button>
+          </Link>
+        </div>
       </main>
     </div>
   )

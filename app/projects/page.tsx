@@ -123,17 +123,17 @@ export default function ProjectsPage() {
             <p className="text-md md:text-lg 2xl:text-xl text-gray-700 text-base leading-relaxed mb-6 2xl:mb-8">{featuredProject.description}</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 2xl:gap-8">
               <Link href={featuredProject.liveLink} target="_blank" rel="noopener noreferrer">
-                <button className="text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-br hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white text-base font-medium rounded-lg shadow transition">
+                <button className="hover:scale-105 transition-transform text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 hover:bg-gradient-to-br hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white text-base font-medium rounded-lg shadow transition">
                   🚀 Visit Site
                 </button>
               </Link>
               <Link href={featuredProject.pdfLink} target="_blank" rel="noopener noreferrer">
-                <button className="text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-base font-medium rounded-lg shadow transition">
+                <button className="hover:scale-105 transition-transform text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-base font-medium rounded-lg shadow transition">
                   📄 Details
                 </button>
               </Link>
               <Link href={featuredProject.codeLink} target="_blank" rel="noopener noreferrer">
-                <button className="text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white text-base font-medium rounded-lg shadow transition">
+                <button className="hover:scale-105 transition-transform text-md 2xl:text-2xl w-full sm:w-auto px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white text-base font-medium rounded-lg shadow transition">
                   💻 View Code
                 </button>
               </Link>
@@ -174,12 +174,12 @@ export default function ProjectsPage() {
                 {/* Centered Buttons */}
                 <div className="mt-5 flex flex-wrap justify-center gap-3">
                   <Link href={project.pdfLink} target="_blank" rel="noopener noreferrer">
-                    <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm 2xl:text-lg px-6 py-3 rounded-lg text-lg shadow transition">
+                    <button className="hover:scale-105 transition-transform bg-indigo-600 hover:bg-indigo-700 text-white text-sm 2xl:text-lg px-6 py-3 rounded-lg text-lg shadow transition">
                       Read Details
                     </button>
                   </Link>
                   <Link href={project.codeLink} target="_blank" rel="noopener noreferrer">
-                    <button className="bg-gray-800 hover:bg-gray-900 text-white text-sm 2xl:text-lg px-6 py-3 rounded-lg text-lg shadow transition">
+                    <button className="hover:scale-105 transition-transform bg-gray-800 hover:bg-gray-900 text-white text-sm 2xl:text-lg px-6 py-3 rounded-lg text-lg shadow transition">
                       View Code
                     </button>
                   </Link>
