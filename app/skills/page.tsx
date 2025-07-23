@@ -64,7 +64,7 @@ export default function SkillsPage() {
   return (
     <div className="min-h-screen bg-white text-gray-900">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-blue-100 to-cyan-100 py-16 px-6">
+      <section className="max-w-screen-2xl mx-auto bg-gradient-to-r from-blue-100 to-cyan-100 py-16 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl 2xl:text-5xl font-bold mb-4">My Technical Skills</h1>
           <p className="text-gray-700 text-lg 2xl:text-2xl max-w-2xl 2xl:max-w-3xl mx-auto">

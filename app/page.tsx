@@ -91,7 +91,7 @@ export default function Home() {
             <img
               src="/profileAvatar.jpg"
               alt="Elijah Campbell Avatar"
-              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-full object-cover shadow-xl border-4 border-white hover:scale-105 transition-transform duration-300"
+              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-full object-cover shadow-xl border-2 border-white hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function Home() {
           My Tools & Platforms
         </h2>
 
-        <div className="w-full mx-auto overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-sky-50 via-blue-50 to-sky-50 shadow-inner">
+        <div className="max-w-screen-2xl w-full mx-auto overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-sky-50 via-blue-50 to-sky-50 shadow-inner">
           <div className="scrolling-images flex space-x-4 p-6 group">
             {[...images, ...images].map((src, index) => (
               <div
