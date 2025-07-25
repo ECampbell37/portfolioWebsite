@@ -10,7 +10,7 @@ export default function SkillsPage() {
     'AI/ML': {
       id: 'ai',
       description:
-        "AI and Machine Learning are my primary areas of expertise and interest. I’ve completed college coursework, Coursera specializations, IBM’s AI Engineering Professional Certificate, and a collection of personal projects. My hands-on experience includes training models like logistic regression and random forests, developing and fine-tuning neural networks, and evaluating model performance. I’m especially passionate about Generative AI — creating LLM-powered applications using LangChain, GPT models, and retrieval-augmented generation (RAG). This field truly excites me, and I hope to expand the world of AI/ML for many years to come!",
+        "AI and Machine Learning are my primary areas of expertise and interest. I’ve completed college coursework, Coursera specializations, IBM’s AI Engineering Professional Certificate, and a collection of personal projects. My hands-on experience includes training models like logistic regression and random forests, developing and fine-tuning neural networks, and evaluating model performance. I’m especially passionate about Generative AI and creating LLM-powered applications using LangChain, GPT models, and retrieval-augmented generation (RAG). This field truly excites me, and I hope to expand the world of AI/ML for many years to come!",
       skillsList: [
         { name: 'Python', logo: '/images/python.png' },
         { name: 'NumPy', logo: '/images/NumPy.png' },

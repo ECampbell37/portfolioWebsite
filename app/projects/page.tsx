@@ -19,7 +19,7 @@ export default function ProjectsPage() {
     {
       title: 'Resume Assistant Web App',
       thumbnail: '/images/Resume-pic2.png',
-      description: 'A GPT-4o-powered resume analysis web app with automated feedback, job role suggestions, and chatbot Q&A.',
+      description: 'A GPT-4o-powered resume analysis web app with AI-driven feedback, tailored job suggestions, and chatbot Q&A',
       pdfLink: 'https://github.com/ECampbell37/Resume_Assistant_Frontend/blob/master/README.md',
       codeLink: 'https://github.com/ECampbell37/Resume_Assistant_Frontend',
     },
