@@ -39,7 +39,7 @@ export default function Home() {
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 w-full">
               {/* Resume */}
               <a
-                href="/documents/Resume-Elijah-Campbell-Ihim.pdf"
+                href="/documents/Elijah-Campbell-Ihim_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
@@ -89,9 +89,9 @@ export default function Home() {
           {/* Avatar */}
           <div className="flex justify-center items-center">
             <img
-              src="/profileAvatar.jpg"
+              src="/EnhancedPhoto.PNG"
               alt="Elijah Campbell Avatar"
-              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-full object-cover shadow-xl border-2 border-white hover:scale-105 transition-transform duration-300"
+              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-3xl object-cover shadow-xl border-2 border-white hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
