@@ -91,7 +91,7 @@ export default function Home() {
             <img
               src="/EnhancedPhoto.PNG"
               alt="Elijah Campbell Avatar"
-              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-3xl object-cover shadow-xl border-2 border-white hover:scale-105 transition-transform duration-300"
+              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-3xl object-cover shadow-xl"
             />
           </div>
         </div>
