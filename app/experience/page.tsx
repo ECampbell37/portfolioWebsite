@@ -53,7 +53,7 @@ export default function ExperiencePage() {
           Work Experience
         </h1>
         <p className="text-zinc-400 text-lg 2xl:text-xl leading-relaxed pt-2">
-          For over 6 years, I've <strong className = "text-purple-300">thoroughly enjoyed</strong> helping the next generation of youth learn, develop and succeed. I am grateful to have played a positive role in the lives of hundreds of young people as they navigate their way through life. 
+          For over 6 years, I&apos;ve <strong className = "text-purple-300">thoroughly enjoyed</strong> helping the next generation of youth learn, develop and succeed. I am grateful to have played a positive role in the lives of hundreds of young people as they navigate their way through life. 
         </p>
       </header>
 

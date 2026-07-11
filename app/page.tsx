@@ -1,7 +1,7 @@
 // app/page.tsx
 'use client'
 
-import { GithubIcon, LinkedinIcon, FileText, Mail, SendHorizonal, GraduationCap, Code2, PersonStanding, Presentation, ArrowRight, Laptop, Briefcase, Award } from 'lucide-react'
+import { GithubIcon, LinkedinIcon, FileText, Mail, SendHorizonal, GraduationCap, Code2, PersonStanding, Presentation, ArrowRight, Laptop, Award } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from 'react'
