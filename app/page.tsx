@@ -1,163 +1,311 @@
-// Home Page
-
+// app/page.tsx
 'use client'
 
-import { GithubIcon, LinkedinIcon, FileText} from 'lucide-react'
-import { Button } from "@/components/ui/button"
+import { GithubIcon, LinkedinIcon, FileText, Mail, SendHorizonal, GraduationCap, Code2, PersonStanding, Presentation, ArrowRight, Laptop, Briefcase, Award } from 'lucide-react'
 import Link from 'next/link'
-
-// Images array for scrolling images
-const images = [
-  '/images/C++.png',
-  '/images/CSS.png',
-  '/images/HTML.png',
-  '/images/js3.png',
-  '/images/nextjs.png',
-  '/images/Jupyter.png',
-  '/images/NumPy.png',
-  '/images/Vscode.png',
-  '/images/python.png',
-  '/images/openai.png',
-  '/images/tensorflow.png',
-  '/images/pytorch.png',
-]
+import { Button } from "@/components/ui/button"
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+  
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isInitialMount, setIsInitialMount] = useState(true)
+
+  const identityPillars = [
+  { 
+    icon: <GraduationCap className="w-5 h-5 text-blue-500 2xl:w-8 2xl:h-8" />, 
+    label: "CS Grad",
+    // Blue shadow glow
+    activeGlow: "border-blue-500/50 shadow-[0_0_30px_rgba(59,130,246,0.25)] text-blue-100"
+  },
+  { 
+    icon: <Code2 className="w-5 h-5 text-indigo-500 2xl:w-8 2xl:h-8" />, 
+    label: "Developer",
+    // Indigo shadow glow
+    activeGlow: "border-indigo-500/50 shadow-[0_0_30px_rgba(99,102,241,0.25)] text-indigo-100"
+  },
+  { 
+    icon: <Presentation className="w-5 h-5 text-emerald-500 2xl:w-8 2xl:h-8" />, 
+    label: "Educator",
+    // Emerald shadow glow
+    activeGlow: "border-emerald-500/50 shadow-[0_0_30px_rgba(16,185,129,0.25)] text-emerald-100"
+  }
+]
+
+  // Automatically cycle the active index every 3 seconds
+  useEffect(() => {
+    // Use 1.5s only on page load, 3s for every turn after
+    const delay = isInitialMount ? 800 : 3000
+
+    const timer = setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % identityPillars.length)
+      
+      // Once the first transition fires, turn off the fast fuse forever
+      if (isInitialMount) {
+        setIsInitialMount(false)
+      }
+    }, delay)
+
+    return () => clearTimeout(timer)
+  }, [activeIndex, isInitialMount, identityPillars.length])
+
+
+  // Navigation Page Route Buttons
+  const routes = [
+    { 
+      name: "Technical Skills", 
+      desc: "Languages and tools I use",
+      href: "/skills", 
+      icon: <Code2 className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-blue-600 hover:border-blue-500 group-hover:text-zinc-950" 
+    },
+    { 
+      name: "Software Projects", 
+      desc: "Apps and software that I've created",
+      href: "/projects", 
+      icon: <Laptop className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-indigo-600 hover:border-indigo-500 group-hover:text-zinc-950" 
+    },
+    { 
+      name: "Work Experience", 
+      desc: "Places I've worked and had an impact",
+      href: "/experience", 
+      icon: <PersonStanding className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-purple-600 hover:border-purple-500 group-hover:text-zinc-950" 
+    },
+    { 
+      name: "Education & Credentials", 
+      desc: "How I learned what I know today",
+      href: "/education", 
+      icon: <Award className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-emerald-600 hover:border-emerald-500 group-hover:text-zinc-950" 
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {/* Hero Section */}
-      <main className="max-w-7xl 2xl:max-w-screen-2xl mx-auto mt-8 2xl:mt-10 p-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-r from-blue-100 to-sky-100 p-8 rounded-2xl">
-            {/* Main Message */}
-            <h2 className="text-4xl 2xl:text-5xl font-bold mb-2 text-gray-900">Hi I&apos;m</h2>
-            <h1 className="text-5xl 2xl:text-6xl font-bold mb-4 text-gray-900">Elijah Campbell</h1>
-            <p className="text-md 2xl:text-lg mb-6 text-gray-800">
-              A forward-thinking developer with a passion for solving problems and helping others. Specializing in machine learning and artificial intelligence, I am excited to use today&apos;s vast array of revolutionary technologies to build creative and helpful applications.
-            </p>
-            {/* Buttons Section */}
-            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:gap-6 gap-4 w-full">
-              {/* Resume */}
-              <a
-                href="/documents/Resume-Elijah-Campbell-Ihim.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
+    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-24 mx-auto w-full text-center relative overflow-hidden bg-zinc-950">
+      
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
+        <div
+          className="absolute -top-48 -left-48 h-[600px] w-[600px]
+          rounded-full bg-blue-500/10 blur-[180px]
+          animate-float-slow"
+        />
+
+        <div
+          className="absolute top-1/3 -right-48 h-[550px] w-[550px]
+          rounded-full bg-indigo-500/10 blur-[200px]
+          animate-float-slow-reverse"
+        />
+
+        <div
+          className="absolute bottom-[-180px] left-1/2 -translate-x-1/2
+          h-[450px] w-[450px]
+          rounded-full bg-purple-500/10 blur-[160px]
+          animate-float-slow"
+        />
+
+      </div>
+
+      <div className="relative z-10 flex flex-col items-center  max-w-4xl 2xl:max-w-7xl mx-auto w-full">
+        
+        {/* Profile Pic */}
+        <div className="relative mb-6 w-60 h-60 2xl:w-72 2xl:h-72 rounded-full overflow-hidden border border-zinc-800 bg-zinc-950 shadow-2xl animate-fade-in">
+          <img
+            src="/ProfilePhoto.PNG"
+            alt="Elijah Campbell-Ihim"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Name */}
+        <h1 
+          className="text-4xl sm:text-6xl 2xl:text-7xl font-black tracking-tight text-zinc-100 mb-8 opacity-0 animate-slide-up delay-1"
+          style={{ animationDelay: '100ms' }}
+        >
+          Elijah Campbell-Ihim
+        </h1>
+
+        {/* 3 Indentity Badges */}
+        <div 
+          className="relative flex items-center justify-center h-24 w-full max-w-xl mb-12 opacity-0 animate-slide-up delay-2 select-none"
+          style={{ animationDelay: '200ms' }}
+        >
+          {identityPillars.map((pillar, index) => {
+            const count = identityPillars.length
+            const offset = (index - activeIndex + count) % count
+
+            let transformStyle = ""
+            let zIndex = "z-0"
+            let opacity = "opacity-30 pointer-events-none"
+            let colorGlow = "border-zinc-800/80 bg-zinc-900 text-zinc-400"
+
+            if (offset === 0) {
+              // Main Center Card - Pops out slightly larger with custom neon glow
+              transformStyle = "translate-x-0 scale-105"
+              zIndex = "z-30"
+              opacity = "opacity-100"
+              colorGlow = `bg-zinc-900/90 ${pillar.activeGlow}`
+            } else if (offset === 1) {
+              // Right Side Card
+              transformStyle = "translate-x-32 sm:translate-x-44 scale-90"
+              zIndex = "z-10"
+            } else if (offset === 2) {
+              // Left Side Card
+              transformStyle = "-translate-x-32 sm:-translate-x-44 scale-90"
+              zIndex = "z-10"
+            }
+
+            return (
+              <div 
+                key={index} 
+                onClick={() => setActiveIndex(index)}
+                className={`absolute flex items-center gap-2.5 px-6 py-3.5 rounded-xl border font-bold text-sm sm:text-base 2xl:text-lg cursor-pointer transition-all duration-700 ease-in-out ${transformStyle} ${zIndex} ${opacity} ${colorGlow} hover:border-zinc-700`}
               >
-                <Button
-                  variant="default"
-                  className="w-full sm:w-auto px-5 py-6 text-md 2xl:text-xl font-semibold hover:scale-105 transition-transform"
-                >
-                  <FileText className="mr-2 h-5 w-5" /> View Resume
-                </Button>
-              </a>
-
-              {/* GitHub + LinkedIn*/}
-              <div className="flex w-full gap-4 sm:gap-6 sm:w-auto">
-                <a
-                  href="https://github.com/ECampbell37"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-1/2 sm:w-auto"
-                >
-                  <Button
-                    variant="ghost"
-                    className="w-full sm:w-auto px-6 py-6 text-md 2xl:text-xl font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                  >
-                    <GithubIcon size={20} />
-                    GitHub
-                  </Button>
-                </a>
-
-                <a
-                  href="https://linkedin.com/in/elijah-campbell-ihim"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-1/2 sm:w-auto"
-                >
-                  <Button
-                    variant="ghost"
-                    className="w-full sm:w-auto px-6 py-6 text-md 2xl:text-xl font-semibold flex items-center justify-center gap-2 hover:scale-105 transition-transform"
-                  >
-                    <LinkedinIcon size={20} />
-                    LinkedIn
-                  </Button>
-                </a>
+                {pillar.icon}
+                <span>{pillar.label}</span>
               </div>
-            </div>
-          </div>
-          {/* Avatar */}
-          <div className="flex justify-center items-center">
-            <img
-              src="/ProfilePhoto.PNG"
-              alt="Elijah Campbell Avatar"
-              className="w-80 h-80 2xl:w-96 2xl:h-96 rounded-3xl object-cover shadow-xl"
-            />
+            )
+          })}
+        </div>
+
+        {/* Resume Github LinkedIn Buttons */}
+        <div 
+          className="w-full max-w-xl mb-24 opacity-0 animate-slide-up delay-3"
+          style={{ animationDelay: '300ms' }}
+        >
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full">
+            <a href="/documents/Resume-Elijah-Campbell-Ihim.pdf" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button className="w-full bg-zinc-50 hover:bg-zinc-200 text-zinc-950 font-extrabold h-14 text-base 2xl:text-lg rounded-xl shadow-lg flex items-center justify-center gap-2.5 transition-all duration-300 hover:-translate-y-0.5">
+                <FileText className="w-5 h-5 2xl:w-8 2xl:h-8" /> View Resume
+              </Button>
+            </a>
+            
+            <a href="https://github.com/ECampbell37" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button variant="outline" className="w-full h-14 border-zinc-800 bg-zinc-900/50 text-zinc-200 hover:text-zinc-50 font-bold text-base 2xl:text-lg rounded-xl flex items-center justify-center gap-2.5 transition-all hover:border-zinc-700 hover:-translate-y-0.5">
+                <GithubIcon className="w-5 h-5 text-zinc-400 2xl:w-8 2xl:h-8" /> GitHub
+              </Button>
+            </a>
+
+            <a href="https://linkedin.com/in/elijah-campbell-ihim" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button variant="outline" className="w-full h-14 border-zinc-800 bg-zinc-900/50 text-zinc-200 hover:text-zinc-50 font-bold text-base 2xl:text-lg rounded-xl flex items-center justify-center gap-2.5 transition-all hover:border-zinc-700 hover:-translate-y-0.5">
+                <LinkedinIcon className="w-5 h-5 text-zinc-400 2xl:w-8 2xl:h-8" /> LinkedIn
+              </Button>
+            </a>
           </div>
         </div>
-      </main>
 
-    {/* Scrolling Images */}
-      <footer className="mt-10 2xl:mt-14 bg-white py-12 px-4">
-        <h2 className="text-3xl 2xl:text-4xl font-bold mb-6 text-center text-gray-800">
-          My Tools & Platforms
-        </h2>
-
-        <div className="max-w-screen-2xl w-full mx-auto overflow-hidden rounded-2xl border border-blue-200 bg-gradient-to-r from-sky-50 via-blue-50 to-sky-50 shadow-inner">
-          <div className="scrolling-images flex space-x-4 p-6 group">
-            {[...images, ...images].map((src, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0"
-              >
-                <img
-                  src={src}
-                  alt={`Logo ${index + 1}`}
-                  className="w-36 h-36 2xl:w-44 2xl:h-44 object-contain rounded-lg bg-transparent p-2 hover:scale-105 transition-transform duration-300"
-                />
+        {/* Quick Stats */}
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-5 w-full mb-20 opacity-0 animate-slide-up delay-4"
+          style={{ animationDelay: "380ms" }}
+        >
+          {[
+            { number: "300+", label: "Students Taught", color: "text-blue-400" },
+            { number: "15+", label: "Software Projects", color: "text-indigo-400" },
+            { number: "6+", label: "Years Teaching", color: "text-purple-400" },
+            { number: "4", label: "Deployed Websites", color: "text-emerald-400" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="rounded-2xl border border-zinc-800 bg-zinc-900/40 backdrop-blur-sm p-6 text-center transition-all duration-300 hover:border-zinc-700 hover:-translate-y-1 hover:shadow-xl"
+            >
+              <div className={`text-3xl 2xl:text-4xl font-black ${stat.color}`}>
+                {stat.number}
               </div>
+
+              <div className="mt-2 text-sm 2xl:text-base text-zinc-400 font-medium">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Page Route Buttons */}
+        <div 
+          className="w-full opacity-0 animate-slide-up delay-5"
+          style={{ animationDelay: '400ms' }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full text-left">
+            {routes.map((route, idx) => (
+              <Link key={idx} href={route.href} className="group block">
+                <div className={`grid grid-cols-[1fr_auto] items-center p-8 rounded-2xl border border-zinc-800/80 bg-zinc-950 transition-all duration-300 ease-out shadow-lg h-44 relative overflow-hidden transform group-hover:-translate-y-1 group-hover:shadow-2xl ${route.style}`}>
+                  
+                  {/* Left Column Content Stack */}
+                  <div className="flex flex-col justify-between h-full relative z-10">
+                    <div className="flex items-center gap-4">
+                      <div className="p-2.5 rounded-xl bg-zinc-900 border border-zinc-800 group-hover:bg-zinc-950/20 group-hover:border-transparent transition-colors">
+                        {route.icon}
+                      </div>
+                      <h2 className="text-xl 2xl:text-2xl font-extrabold tracking-tight text-zinc-100 group-hover:text-zinc-950 transition-colors">
+                        {route.name}
+                      </h2>
+                    </div>
+
+                    <p className="text-sm 2xl:text-base text-zinc-400 group-hover:text-zinc-900 font-medium leading-relaxed max-w-[95%] transition-colors">
+                      {route.desc}
+                    </p>
+                  </div>
+
+                  {/* Right Column Arrow Element */}
+                  <div className="h-full flex items-end justify-end pl-6 pb-1 relative z-10">
+                    <ArrowRight className="w-5 h-5 text-zinc-600 group-hover:text-zinc-950 transition-all group-hover:translate-x-1" />
+                  </div>
+
+                </div>
+              </Link>
             ))}
           </div>
         </div>
+      </div>
 
-        <style jsx>{`
-          .scrolling-images {
-            display: flex;
-            animation: scroll 60s linear infinite;
-            width: max-content;
-          }
+      {/* Contact Footer */}
+      <footer className="mt-28 w-full border-t border-zinc-800 pt-16 animate-slide-up delay-6">
+        <div className="max-w-3xl mx-auto text-center">
 
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-50%);
-            }
-          }
-        `}</style>
+          <h2 className="text-3xl 2xl:text-4xl font-black tracking-tight text-zinc-50 mb-4">
+            Let&apos;s Work Together!
+          </h2>
+
+          <p className="text-zinc-400 leading-relaxed max-w-xl mx-auto mb-8  2xl:text-lg">
+            Whether you&apos;re looking for a software developer, AI Engineer, 
+            CS educator, or simply want to connect,
+            I&apos;d love to hear from you.
+          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+
+            <a href="mailto:elijahcampbellihim@gmail.com">
+              <Button className="bg-blue-600 hover:bg-blue-500 text-white rounded-xl px-8 py-6 font-bold transition-all duration-300 hover:-translate-y-1 2xl:text-base">
+                <Mail className="w-4 h-4 mr-2 2xl:w-6 2xl:h-6" /> Email Me
+              </Button>
+            </a>
+
+            <a
+              href="https://linkedin.com/in/elijah-campbell-ihim"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="border-zinc-800 bg-zinc-900 text-zinc-200 hover:border-zinc-700 rounded-xl px-8 py-6 font-bold transition-all duration-300 hover:-translate-y-1 2xl:text-base"
+              >
+                <SendHorizonal className="w-4 h-4 mr-2 2xl:w-6 2xl:h-6" /> Message Me
+              </Button>
+            </a>
+
+          </div>
+
+          <p className="text-xs 2xl:text-sm text-zinc-600">
+            Designed and developed using Next.js, React, and Tailwind CSS.
+          </p>
+
+        </div>
       </footer>
 
-      {/* Face Buttons */}
-      <div className="mt-16 flex justify-center gap-16 flex-wrap px-6 pb-24">
-        <Link href="/skills" className="hover:no-underline">
-          <button className="text-2xl 2xl:text-3xl font-bold py-5 px-10 rounded-full flex items-center gap-4 transition-all duration-300
-            bg-transparent text-blue-600 hover:text-white
-            hover:bg-gradient-to-r hover:from-blue-400 hover:via-sky-500 hover:to-blue-600
-            hover:shadow-[0_0_20px_rgba(56,189,248,0.6)] hover:scale-110">
-            🛠️ Skills
-          </button>
-        </Link>
-
-        <Link href="/projects" className="hover:no-underline">
-          <button className="text-2xl 2xl:text-3xl font-bold py-5 px-10 rounded-full flex items-center gap-4 transition-all duration-300
-            bg-transparent text-purple-600 hover:text-white
-            hover:bg-gradient-to-r hover:from-purple-400 hover:via-fuchsia-500 hover:to-purple-600
-            hover:shadow-[0_0_20px_rgba(192,132,252,0.6)] hover:scale-110">
-            🚀 Projects
-          </button>
-        </Link>
-      </div>
     </div>
+    
   )
 }
