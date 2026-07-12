@@ -226,6 +226,11 @@ export default function Home() {
           ))}
         </div>
 
+        {/* Small Section Header */}
+        <div className="w-full text-center mb-6 opacity-0 animate-slide-up" style={{ animationDelay: '390ms' }}>
+          <span className="text-xs 2xl:text-sm font-bold tracking-widest text-zinc-500 uppercase">Explore my Portfolio</span>
+        </div>
+
         {/* Page Route Buttons */}
         <div 
           className="w-full opacity-0 animate-slide-up delay-5"
@@ -266,7 +271,7 @@ export default function Home() {
 
       {/* Contact Footer */}
       <footer className="mt-28 w-full border-t border-zinc-800 pt-16 animate-slide-up delay-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl 2xl:max-w-4xl mx-auto text-center">
 
           <h2 className="text-3xl 2xl:text-4xl font-black tracking-tight text-zinc-50 mb-4">
             Let&apos;s Work Together!
