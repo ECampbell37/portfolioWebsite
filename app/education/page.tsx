@@ -122,7 +122,7 @@ export default function EducationPage() {
                             </div>
                             
                             {/* Clean, short highlights list */}
-                            <ul className="space-y-2 text-sm 2xl:text-base text-zinc-400 mb-6">
+                            <ul className="space-y-2 text-sm 2xl:text-base text-zinc-400">
                               {item.highlights?.map((point, i) => (
                                 <li key={i} className="flex gap-2">
                                   <span className="text-emerald-400 mt-1">•</span>
@@ -133,7 +133,7 @@ export default function EducationPage() {
 
                             {/* Major Courses Section */}
                             {item.courses && (
-                              <div className="pt-4 border-t border-zinc-800/60">
+                              <div className="mt-6 pt-4 border-t border-zinc-800/60">
                                 <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-3 font-mono">
                                   Major Courses
                                 </h3>

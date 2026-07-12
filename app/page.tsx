@@ -84,7 +84,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-6 py-24 mx-auto w-full text-center relative overflow-hidden bg-zinc-950">
+    <div className="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-12 mx-auto w-full text-center relative overflow-hidden bg-zinc-950">
       
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
