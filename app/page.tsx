@@ -36,7 +36,7 @@ export default function Home() {
   // Automatically cycle the active index every 3 seconds
   useEffect(() => {
     // Use 0.9s only on page load, 3s for every turn after
-    const delay = isInitialMount ? 900 : 3000
+    const delay = isInitialMount ? 1500 : 3000
 
     const timer = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % identityPillars.length)

@@ -46,7 +46,7 @@ export default function EducationPage() {
       dates: 'Jun 2023 - Aug 2023',
       logo: '/images/stanford.png',
       certLink: 'https://coursera.org/share/d64e155722fda6ada9a5634a38ce5042',
-      topics: ['Supervised Learning', 'Unsupervised Learning', 'Neural Networks', 'Reinforcement Learning'],
+      topics: ['Supervised Learning', 'Unsupervised Learning', 'Neural Networks', 'Recommendation Systems', 'Reinforcement Learning'],
     },
     {
       type: 'degree',

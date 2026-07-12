@@ -93,7 +93,7 @@ export default function SkillsPage() {
       <header className="max-w-3xl mx-auto px-6 text-center mb-16 animate-slide-up delay-1">
         <h1 className="text-4xl 2xl:text-6xl sm:text-5xl font-black tracking-tight mb-4">Technical Skills</h1>
         <p className="text-zinc-400 text-lg 2xl:text-xl leading-relaxed">
-          Tools and technologies I build with, across AI, web development, and data.
+          Tools and technologies I use in AI, full-stack development, and data science.
         </p>
       </header>
 
