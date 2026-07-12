@@ -3,6 +3,7 @@
 
 import { GithubIcon, LinkedinIcon, FileText, Mail, SendHorizonal, GraduationCap, Code2, PersonStanding, Presentation, ArrowRight, Laptop, Award } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { useState, useEffect } from 'react'
 
@@ -34,8 +35,8 @@ export default function Home() {
 
   // Automatically cycle the active index every 3 seconds
   useEffect(() => {
-    // Use 1.5s only on page load, 3s for every turn after
-    const delay = isInitialMount ? 800 : 3000
+    // Use 0.9s only on page load, 3s for every turn after
+    const delay = isInitialMount ? 900 : 3000
 
     const timer = setTimeout(() => {
       setActiveIndex((prev) => (prev + 1) % identityPillars.length)
@@ -113,10 +114,12 @@ export default function Home() {
         
         {/* Profile Pic */}
         <div className="relative mb-6 w-60 h-60 2xl:w-72 2xl:h-72 rounded-full overflow-hidden border border-zinc-800 bg-zinc-950 shadow-2xl animate-fade-in">
-          <img
+          <Image
             src="/ProfilePhoto.PNG"
             alt="Elijah Campbell-Ihim"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
         </div>
         

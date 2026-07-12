@@ -2,26 +2,33 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { GraduationCap, Award, ExternalLink } from 'lucide-react'
 
 export default function EducationPage() {
   const education = [
-    {
-      type: 'degree',
-      title: 'Bachelor of Science, Computer Science',
-      institution: 'Ramapo College of New Jersey',
-      location: 'Mahwah, NJ',
-      dates: 'Aug 2021 - Jun 2025',
-      logo: '/images/ramapo.png',
-      meta: '3.8 GPA',
-      highlights: [
-        'Full-Tuition Presidential Scholarship',
-        'Graduated Magna Cum Laude',
-        'Dean\'s List recipient every semester',
-        'Major Courses: CS I & II, Data Structures, Assembly Language, Machine Learning, Data Analysis & Visualization, Software Design, Analysis of Algorithms, Database Design, Web Application Development, Cyber Security, Mobile Development, Operating Systems, Organization of Programming Languages, Linear Algebra, Senior Project'
-      ],
-    },
+  {
+    type: 'degree',
+    title: 'Bachelor of Science, Computer Science',
+    institution: 'Ramapo College of New Jersey',
+    location: 'Mahwah, NJ',
+    dates: 'Aug 2021 - Jun 2025',
+    logo: '/images/ramapo.png',
+    meta: '3.8 GPA',
+    highlights: [
+      'Full-Tuition Presidential Scholarship',
+      'Graduated Magna Cum Laude',
+      'Dean\'s List recipient every semester',
+    ],
+    // Extract courses into their own array
+    courses: [
+      'CS I & II', 'Data Structures', 'Assembly Language', 'Machine Learning', 
+      'Data Analysis & Visualization', 'Software Design', 'Cyber Security', 'Analysis of Algorithms', 
+      'Database Design',  'Discrete Structures','Web Application Development',  'Mobile Development', 
+      'Linear Algebra', 'Operating Systems', 'Organization of Prog. Languages',  'Senior Project'
+    ]
+  },
     
     {
       type: 'certification',
@@ -86,8 +93,15 @@ export default function EducationPage() {
                       <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden hover:border-emerald-500/50 hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 p-6">
 
                         <div className="flex items-start gap-4 mb-4">
-                          <div className="shrink-0 w-16 h-16 rounded-xl bg-zinc-50 flex items-center justify-center p-2">
-                            <img src={item.logo} alt={item.institution} className="w-full h-full object-contain" />
+                          <div className="shrink-0 w-16 h-16 rounded-xl bg-zinc-50 flex items-center justify-center p-2 relative">
+                            <Image 
+                              src={item.logo} 
+                              alt={item.institution} 
+                              fill
+                              sizes="64px"
+                              className="object-contain p-2" 
+                              priority
+                            />
                           </div>
                           <div>
                             <div className="flex items-center gap-2 text-emerald-400 text-sm 2xl:text-base font-mono mb-1">
@@ -106,7 +120,9 @@ export default function EducationPage() {
                               <span className="text-xs 2xl:text-sm font-mono text-zinc-500">•</span>
                               <span className="text-xs 2xl:text-sm font-mono text-emerald-400">{item.meta}</span>
                             </div>
-                            <ul className="space-y-2 text-sm 2xl:text-base text-zinc-400">
+                            
+                            {/* Clean, short highlights list */}
+                            <ul className="space-y-2 text-sm 2xl:text-base text-zinc-400 mb-6">
                               {item.highlights?.map((point, i) => (
                                 <li key={i} className="flex gap-2">
                                   <span className="text-emerald-400 mt-1">•</span>
@@ -114,6 +130,25 @@ export default function EducationPage() {
                                 </li>
                               ))}
                             </ul>
+
+                            {/* Major Courses Section */}
+                            {item.courses && (
+                              <div className="pt-4 border-t border-zinc-800/60">
+                                <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-3 font-mono">
+                                  Major Courses
+                                </h3>
+                                <div className="flex flex-wrap gap-1.5">
+                                  {item.courses.map((course) => (
+                                    <span
+                                      key={course}
+                                      className="text-[11px] 2xl:text-xs font-medium px-2 py-0.5 rounded bg-zinc-800/60 text-zinc-300 border border-zinc-700/40"
+                                    >
+                                      {course}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
                           </>
                         )}
 

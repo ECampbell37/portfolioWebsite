@@ -3,6 +3,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 
 // Define interfaces for type safety
@@ -102,14 +103,16 @@ export default function SkillsPage() {
         <div className="flex animate-marquee gap-14 px-7">
           {[...allLogos, ...allLogos].map((skill, i) => (
             <div key={`${skill.name}-${i}`} className="flex items-center gap-3 shrink-0 opacity-60 hover:opacity-100 transition-opacity">
-              <img src={skill.logo} alt={skill.name} className="w-10 h-10 2xl:w-14 2xl:h-14 object-contain" />
+              <div className="w-10 h-10 2xl:w-14 2xl:h-14 relative">
+                <Image src={skill.logo} alt={skill.name} fill sizes="56px" className="object-contain" priority />
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       <main className="max-w-6xl 2xl:max-w-7xl mx-auto px-6 animate-slide-up delay-3">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-10">
           {Object.entries(skills).map(([category, data]) => {
             const styles = accentStyles[data.accent]
             return (
@@ -127,7 +130,9 @@ export default function SkillsPage() {
                       title={skill.name}
                       className="flex flex-col items-center gap-2 p-3 rounded-xl bg-zinc-900/50 border border-zinc-800/50 hover:border-zinc-700 transition-colors"
                     >
-                      <img src={skill.logo} alt={skill.name} className="w-8 h-8 2xl:w-12 2xl:h-12 object-contain" />
+                      <div className="w-8 h-8 2xl:w-12 2xl:h-12 relative">
+                        <Image src={skill.logo} alt={skill.name} fill sizes="48px" className="object-contain" priority />
+                      </div>
                       <span className="text-[11px] text-zinc-500 2xl:text-sm text-center leading-tight">{skill.name}</span>
                     </div>
                   ))}

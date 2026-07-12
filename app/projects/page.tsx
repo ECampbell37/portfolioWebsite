@@ -3,6 +3,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Github, ExternalLink } from 'lucide-react'
 
@@ -114,18 +115,23 @@ export default function ProjectsPage() {
           <div className="flex-1 h-px bg-gradient-to-r from-indigo-500/40 to-transparent" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 2xl:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 2xl:gap-12">
           {webApps.map((project) => (
             <div
               key={project.title}
               className="group rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden transition-all duration-300 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10"
             >
               <div className="w-full h-56 overflow-hidden bg-zinc-900">
-                <img
-                  src={project.thumbnail}
-                  alt={`${project.title} screenshot`}
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
+                <div className="w-full h-56 overflow-hidden bg-zinc-900 relative">
+                  <Image
+                    src={project.thumbnail}
+                    alt={`${project.title} screenshot`}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl 2xl:text-2xl font-extrabold text-zinc-50 mb-2">{project.title}</h3>
@@ -154,7 +160,7 @@ export default function ProjectsPage() {
           <div className="flex-1 h-px bg-gradient-to-r from-purple-500/40 to-transparent" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 2xl:gap-14">
           {academicProjects.map((project) => (
             <a
               key={project.title}
@@ -164,11 +170,15 @@ export default function ProjectsPage() {
               className="group block rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden transition-all duration-300 hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10"
             >
               <div className="w-full h-36 overflow-hidden bg-zinc-900">
-                <img
-                  src={project.thumbnail}
-                  alt={`${project.title} thumbnail`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <div className="w-full h-36 overflow-hidden bg-zinc-900 relative">
+                  <Image
+                    src={project.thumbnail}
+                    alt={`${project.title} thumbnail`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
               </div>
               <div className="p-5">
                 <h3 className="text-lg 2xl:text-2xl font-bold text-zinc-50 mb-1.5">{project.title}</h3>
