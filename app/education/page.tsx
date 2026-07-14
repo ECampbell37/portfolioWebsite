@@ -125,7 +125,7 @@ export default function EducationPage() {
                             <ul className="space-y-2 text-sm 2xl:text-base text-zinc-400">
                               {item.highlights?.map((point, i) => (
                                 <li key={i} className="flex gap-2">
-                                  <span className="text-emerald-400 mt-1">•</span>
+                                  <span className="text-emerald-400 mb-1">•</span>
                                   <span>{point}</span>
                                 </li>
                               ))}

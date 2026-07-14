@@ -57,29 +57,29 @@ export default function Home() {
       name: "Technical Skills", 
       desc: "Languages and tools I use",
       href: "/skills", 
-      icon: <Code2 className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
-      style: "hover:bg-blue-600 hover:border-blue-500 group-hover:text-zinc-950" 
+      icon: <Code2 className="w-6 h-6 text-blue-400 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-blue-500 hover:border-blue-400 group-hover:text-zinc-950" 
     },
     { 
       name: "Software Projects", 
       desc: "Apps and software that I've created",
       href: "/projects", 
-      icon: <Laptop className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
-      style: "hover:bg-indigo-600 hover:border-indigo-500 group-hover:text-zinc-950" 
+      icon: <Laptop className="w-6 h-6 text-indigo-400 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-indigo-500 hover:border-indigo-400 group-hover:text-zinc-950" 
     },
     { 
       name: "Work Experience", 
       desc: "Places I've worked and had an impact",
       href: "/experience", 
-      icon: <PersonStanding className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
-      style: "hover:bg-purple-600 hover:border-purple-500 group-hover:text-zinc-950" 
+      icon: <PersonStanding className="w-6 h-6 text-purple-400 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-purple-500 hover:border-purple-400 group-hover:text-zinc-950" 
     },
     { 
       name: "Education & Credentials", 
       desc: "How I learned what I know today",
       href: "/education", 
-      icon: <Award className="w-6 h-6 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
-      style: "hover:bg-emerald-600 hover:border-emerald-500 group-hover:text-zinc-950" 
+      icon: <Award className="w-6 h-6 text-emerald-400 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
+      style: "hover:bg-emerald-500 hover:border-emerald-400 group-hover:text-zinc-950" 
     }
   ]
 
