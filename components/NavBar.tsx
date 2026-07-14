@@ -53,7 +53,7 @@ export default function Navbar() {
 
         {/* Sidebar Drawer Container */}
         <div 
-          className={`relative w-full max-w-sm h-full bg-zinc-950/95 border-l border-zinc-900 p-8 flex flex-col justify-between shadow-2xl transition-transform duration-500 ease-out transform ${
+          className={`relative w-full overflow-y-auto max-w-sm h-full bg-zinc-950/95 border-l border-zinc-900 p-8 flex flex-col justify-between shadow-2xl transition-transform duration-500 ease-out transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >

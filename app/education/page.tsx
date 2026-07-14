@@ -72,7 +72,7 @@ export default function EducationPage() {
           Education &amp; Credentials
         </h1>
         <p className="text-zinc-400 text-lg 2xl:text-xl leading-relaxed">
-          My formal academic history, as well as online certifications that helped keep me updated on the latest technology.
+          My formal academic history, as well as online certifications that helped me stay up-to-date on the latest technology.
         </p>
       </header>
 

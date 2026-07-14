@@ -105,7 +105,7 @@ export default function ProjectsPage() {
           Software Projects
         </h1>
         <p className="text-zinc-400 text-lg 2xl:text-xl leading-relaxed">
-          A collection of my web applications that you can try right now, plus academic projects from my college coursework and independent learning.
+          A collection of my web applications that you can <strong className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-violet-400 to-purple-400">try right now</strong>, plus academic projects from my college coursework and independent learning.
         </p>
       </header>
 
