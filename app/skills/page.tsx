@@ -25,7 +25,7 @@ export default function SkillsPage() {
       id: 'ai',
       accent: 'blue',
       description:
-        "Training machine learning models, developing neural networks, and building LLM-powered apps with LangChain, RAG, and prompt engineering.",
+        "Training machine learning models, developing neural networks, and building LLM-powered apps with LangChain, RAG, prompt engineering, and agentic workflows.",
       skillsList: [
         { name: 'Python', logo: '/images/python.png' },
         { name: 'NumPy', logo: '/images/NumPy.png' },

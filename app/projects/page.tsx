@@ -20,7 +20,7 @@ export default function ProjectsPage() {
     {
       title: 'Resume Assistant',
       thumbnail: '/images/resumeThumbnail.png',
-      description: 'Get instant AI feedback on your resume, match with online job posts, or create a brand new resume from scratch.',
+      description: 'Get instant AI feedback on your resume, match with online job posts, or create a brand-new resume from scratch.',
       liveLink: 'https://resume-assistant-inky.vercel.app/',
       codeLink: 'https://github.com/ECampbell37/Resume_Assistant_Frontend',
     },
