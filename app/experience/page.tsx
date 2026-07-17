@@ -73,7 +73,7 @@ export default function ExperiencePage() {
 
                   <div className="md:grid md:grid-cols-2 md:gap-12 items-start">
                     <div className={`pl-16 md:pl-0 ${isLeft ? 'md:col-start-1' : 'md:col-start-2'}`}>
-                      <div className="rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+                      <div className="group rounded-2xl border border-zinc-800/80 bg-zinc-900/40 overflow-hidden hover:border-purple-500/50 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
                         <div className="w-full h-48 bg-zinc-900 overflow-hidden relative">
                           <Image 
                             src={job.image} 
@@ -81,7 +81,7 @@ export default function ExperiencePage() {
                             fill
                             priority
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            className="object-cover" 
+                            className="object-cover transition-transform duration-500 group-hover:scale-105" 
                           />
                         </div>
                         <div className="p-6">

@@ -27,7 +27,7 @@ export default function ProjectsPage() {
     {
       title: 'Smart Budget',
       thumbnail: '/images/budgetThumbnail.png',
-      description: 'Simple calculator app to help people plan their monthly budget and lifestyle expenses',
+      description: 'A simple calculator app to help people plan their monthly budget and lifestyle expenses',
       liveLink: 'https://budget-app-smoky-zeta.vercel.app/',
       codeLink: 'https://github.com/ECampbell37/budget-app',
     },
