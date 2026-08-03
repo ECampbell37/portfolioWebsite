@@ -37,7 +37,7 @@ export default function EducationPage() {
       dates: 'Nov 2024 - Jan 2025',
       logo: '/images/ibm.png',
       certLink: 'https://coursera.org/share/70bf2eb3f7c0aedda2e4f7f180536c18',
-      topics: ['TensorFlow', 'Keras', 'PyTorch', 'NLP', 'Transformers', 'Fine-Tuning', 'RAG', 'LLMs', 'LangChain'],
+      topics: ['TensorFlow', 'Keras', 'PyTorch', 'NLP', 'Transformers', 'Fine-Tuning', 'RAG', 'LLMs', 'LangChain', 'Agentic Systems'],
     },
     {
       type: 'certification',
@@ -55,7 +55,7 @@ export default function EducationPage() {
       location: 'Waldwick, NJ',
       dates: 'Sep 2017 - Jun 2021',
       logo: '/images/waldwick.png',
-      meta: '4.86 GPA',
+      meta: '4.87 GPA',
       highlights: [
         'Salutatorian GPA',
         'Straight A\'s every quarter, every year',

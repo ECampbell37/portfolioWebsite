@@ -76,7 +76,7 @@ export default function Home() {
     },
     { 
       name: "Education & Credentials", 
-      desc: "How I learned what I know today",
+      desc: "Degrees and certifications I've earned",
       href: "/education", 
       icon: <Award className="w-6 h-6 text-emerald-400 group-hover:text-zinc-950 transition-colors 2xl:w-8 2xl:h-8" />,
       style: "hover:bg-emerald-500 hover:border-emerald-400 group-hover:text-zinc-950" 
@@ -209,7 +209,7 @@ export default function Home() {
             { number: "300+", label: "Students Taught", color: "text-blue-400" },
             { number: "15+", label: "Software Projects", color: "text-indigo-400" },
             { number: "6+", label: "Years Teaching", color: "text-purple-400" },
-            { number: "4", label: "Deployed Websites", color: "text-emerald-400" },
+            { number: "4.87", label: "GPA", color: "text-emerald-400" },
           ].map((stat) => (
             <div
               key={stat.label}

@@ -25,7 +25,7 @@ export default function SkillsPage() {
       id: 'ai',
       accent: 'blue',
       description:
-        "Training machine learning models, developing neural networks, and building LLM-powered apps with LangChain, RAG, prompt engineering, and agentic workflows.",
+        "Trained machine learning models, developed neural networks, and created LLM-powered apps with LangChain, RAG, prompt engineering, and agentic systems.",
       skillsList: [
         { name: 'Python', logo: '/images/python.png' },
         { name: 'NumPy', logo: '/images/NumPy.png' },
@@ -41,7 +41,7 @@ export default function SkillsPage() {
       id: 'webdev',
       accent: 'indigo',
       description:
-        "Full-stack apps with React, Next.js, and Tailwind, featuring UI/UX design, API integration, and cloud deployment.",
+        "Built full-stack apps with React, Next.js, and Tailwind, featuring UI/UX design, API integration, and cloud deployment.",
       skillsList: [
         { name: 'HTML', logo: '/images/HTML.png' },
         { name: 'CSS', logo: '/images/CSS.png' },
@@ -69,7 +69,7 @@ export default function SkillsPage() {
       id: 'cs',
       accent: 'purple',
       description:
-        "A solid foundation in data structures, algorithms, and OOP, across both low and high-level languages.",
+        "Solid foundation in data structures, algorithms, and OOP, across both low and high-level languages.",
       skillsList: [
         { name: 'C', logo: '/images/C.png' },
         { name: 'C++', logo: '/images/C++.png' },

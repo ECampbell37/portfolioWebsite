@@ -34,7 +34,7 @@ export default function ProjectsPage() {
     {
       title: 'Portfolio Website',
       thumbnail: '/images/siteThumbnail.png',
-      description: 'This Portfolio website! Showcases my skills, projects, education history, and real world impact',
+      description: 'This Portfolio website! Showcases my skills, projects, education history, and real-world impact',
       liveLink: '/',
       codeLink: 'https://github.com/ECampbell37/portfolioWebsite',
     },
