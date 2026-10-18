@@ -180,7 +180,7 @@ export default function Home() {
           style={{ animationDelay: '300ms' }}
         >
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full">
-            <a href="/documents/Resume-Elijah-Campbell-Ihim.pdf" target="_blank" rel="noopener noreferrer" className="flex-1">
+            <a href="/documents/Elijah_Campbell-Ihim_Resume.pdf" target="_blank" rel="noopener noreferrer" className="flex-1">
               <Button className="w-full bg-zinc-50 hover:bg-zinc-200 text-zinc-950 font-extrabold h-14 text-base 2xl:text-lg rounded-xl shadow-lg flex items-center justify-center gap-2.5 transition-all duration-300 hover:-translate-y-0.5">
                 <FileText className="w-5 h-5 2xl:w-8 2xl:h-8" /> View Resume
               </Button>
